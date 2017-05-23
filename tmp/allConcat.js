@@ -15,7 +15,7 @@ $(document).ready(function() {
   function keepTime(){
     $('#currentTime').text(moment().format('H:mm:ss'));
     if(alarm){
-      if(moment().format('HH:mm:ss')==alarm.time){
+      if(alarm.timeCheck(moment().format('H:mm:ss'))){
         console.log('alarm goes off');
         $('#rooster').show()
       }
